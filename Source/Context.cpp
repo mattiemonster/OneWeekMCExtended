@@ -17,12 +17,12 @@ Context::Context(const Config &config)
     // This is no longer necessary due to the Mac Support update.
 
     if (config.isFullscreen) {
-        window.create(sf::VideoMode::getDesktopMode(), "MineCraft Week",
+        window.create(sf::VideoMode::getDesktopMode(), "Minecraft Clone",
                       sf::Style::Fullscreen, settings);
     }
     else {
         sf::VideoMode winMode(config.windowX, config.windowY);
-        window.create(winMode, "MineCraft Week", sf::Style::Close, settings);
+        window.create(winMode, "Minecraft Clone", sf::Style::Close, settings);
     }
 
     if (!gladLoadGL()) {

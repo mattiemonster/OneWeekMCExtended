@@ -10,16 +10,21 @@ endif()
 project(mc-one-week)
 
 #Add the files
-file(GLOB_RECURSE SOURCES Source/*.cpp)
+file(GLOB_RECURSE SOURCES Source/*.cpp Source/*.h Source/*.hpp)
 add_executable(mc-one-week ${SOURCES})
+
+# Set variables
+set(SFML_DIR "SFML/lib/cmake/SFML")
+set(GLM_INCLUDE_DIR "glm")
+set(SFML_STATIC_LIBRARIES TRUE)
 
 #Add libraries
 #SFML
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake_modules" ${CMAKE_MODULE_PATH})
-find_package(SFML REQUIRED graphics network audio window system)
+find_package(SFML 2.5 COMPONENTS graphics network audio window system REQUIRED)
 
 #glm
-find_package(glm REQUIRED)
+find_package(GLM REQUIRED)
 
 # glad
 # https://github.com/aaronmjacobs/InitGL
@@ -32,4 +37,6 @@ target_link_libraries(${PROJECT_NAME} "glad" "${CMAKE_DL_LIBS}")
 
 find_package(Threads)
 
-target_link_libraries(mc-one-week Threads::Threads ${EXECUTABLE_NAME} ${SFML_LIBRARIES}) 
+target_link_libraries(mc-one-week sfml-graphics sfml-audio sfml-network sfml-window sfml-system)
+target_link_libraries(mc-one-week Threads::Threads)
+# target_link_libraries(mc-one-week Threads::Threads ${EXECUTABLE_NAME} ${SFML_LIBRARIES}) 

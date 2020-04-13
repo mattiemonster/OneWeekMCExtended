@@ -1,0 +1,4 @@
+D:/OneDrive/Dev/OneWeekMCExtended/CMakeFiles/mc-one-week.dir
+D:/OneDrive/Dev/OneWeekMCExtended/CMakeFiles/glad.dir
+D:/OneDrive/Dev/OneWeekMCExtended/CMakeFiles/ALL_BUILD.dir
+D:/OneDrive/Dev/OneWeekMCExtended/CMakeFiles/ZERO_CHECK.dir

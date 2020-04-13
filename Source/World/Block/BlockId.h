@@ -3,7 +3,7 @@
 
 #include <cstdint>
 
-using Block_t = uint8_t;
+using Block_t = uint16_t;
 
 enum class BlockId : Block_t {
     Air = 0,
