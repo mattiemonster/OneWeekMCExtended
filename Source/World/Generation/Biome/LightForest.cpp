@@ -3,7 +3,7 @@
 #include "../Structures/TreeGenerator.h"
 
 LightForest::LightForest(int seed)
-    : Biome(getNoiseParameters(), 1, 80, seed)
+    : Biome(getNoiseParameters(), 60, 80, seed)
 {
 }
 
