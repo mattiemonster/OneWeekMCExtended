@@ -7,11 +7,13 @@ class RenderMaster;
 
 class FPSCounter {
   public:
-    FPSCounter();
+    FPSCounter(bool printFps);
 
     void update();
 
     void draw(RenderMaster &renderer);
+
+    // void setConfig(const Config &config);
 
   private:
     sf::Text m_text;
@@ -19,6 +21,10 @@ class FPSCounter {
 
     sf::Clock m_delayTimer;
     sf::Clock m_fpsTimer;
+
+    bool m_printFps = false;
+
+    // Config m_config;
 
     float m_fps = 0;
 

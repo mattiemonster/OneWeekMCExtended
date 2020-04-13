@@ -4,7 +4,8 @@
 
 #include <iostream>
 
-FPSCounter::FPSCounter()
+FPSCounter::FPSCounter(bool printFps)
+    : m_printFps(printFps)
 {
     m_text.move(10, 10);
     m_text.setOutlineColor(sf::Color::Black);
@@ -23,7 +24,7 @@ void FPSCounter::update()
         m_fps = m_frameCount / m_fpsTimer.restart().asSeconds();
         m_frameCount = 0;
         m_delayTimer.restart();
-        std::cout << m_fps << '\n';
+        if(m_printFps) std::cout << m_fps << "fps\n";
     }
 }
 

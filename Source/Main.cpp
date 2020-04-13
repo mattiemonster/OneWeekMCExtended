@@ -65,6 +65,10 @@ void loadConfig(Config &config)
             {
                 configFile >> config.showInfo;
             }
+            else if (key == "debugprintfps")
+            {
+                configFile >> config.debugPrintFps;
+            }
         }
     }
     else {

@@ -3,3 +3,4 @@ fullscreen 0
 windowsize 1280 720
 fov 105
 showinfo 0
+debugprintfps 1

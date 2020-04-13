@@ -8,6 +8,7 @@ struct Config {
     int renderDistance = 16;
     int fov = 90;
     bool showInfo = false;
+    bool debugPrintFps = false;
 };
 
 #endif // CONFIG_H_INCLUDED
