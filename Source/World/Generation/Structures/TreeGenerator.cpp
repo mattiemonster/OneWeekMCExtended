@@ -47,6 +47,18 @@ void makeCactus3(Chunk &chunk, Random<std::minstd_rand> &rand, int x, int y,
 
     builder.build(chunk);
 }
+
+void makeCactus4(Chunk &chunk, Random<std::minstd_rand> &rand, int x, int y,
+                 int z)
+{
+    StructureBuilder builder;
+    int height = rand.intInRange(6, 9);
+    builder.makeColumn(x, z, y - 3, height, CACTUS);
+    builder.makeRowX(x - 1, x + 1, y - 3, z, BlockId::CactusRoot);
+    builder.makeRowZ(z - 1, z + 1, x, y - 3, BlockId::CactusRoot);
+
+    builder.build(chunk);
+}
 } // namespace
 
 void makeOakTree(Chunk &chunk, Random<std::minstd_rand> &rand, int x, int y,
@@ -103,7 +115,7 @@ void makePalmTree(Chunk &chunk, Random<std::minstd_rand> &rand, int x, int y,
 void makeCactus(Chunk &chunk, Random<std::minstd_rand> &rand, int x, int y,
                 int z)
 {
-    int cac = rand.intInRange(0, 2);
+    int cac = rand.intInRange(0, 3);
 
     switch (cac) {
         case 0:
@@ -116,5 +128,10 @@ void makeCactus(Chunk &chunk, Random<std::minstd_rand> &rand, int x, int y,
 
         case 2:
             makeCactus3(chunk, rand, x, y, z);
+            break;
+
+        case 3:
+            makeCactus4(chunk, rand, x, y, z);
+            break;
     }
 }

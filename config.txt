@@ -1,6 +1,6 @@
 renderdistance 8
 fullscreen 0
 windowsize 1280 720
-fov 105
+fov 110
 showinfo 0
 debugprintfps 1

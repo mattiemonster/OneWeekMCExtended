@@ -70,35 +70,50 @@ const Material &Material::toMaterial(BlockId id)
     switch (id) {
         case BlockId::Grass:
             return GRASS_BLOCK;
+            break;
 
         case BlockId::Dirt:
             return DIRT_BLOCK;
+            break;
 
         case BlockId::Stone:
             return STONE_BLOCK;
+            break;
 
         case BlockId::OakBark:
             return OAK_BARK_BLOCK;
+            break;
 
         case BlockId::OakLeaf:
             return OAK_LEAF_BLOCK;
+            break;
 
         case BlockId::Sand:
             return SAND_BLOCK;
+            break;
 
         case BlockId::Cactus:
             return CACTUS_BLOCK;
+            break;
 
         case BlockId::Rose:
             return ROSE;
+            break;
 
         case BlockId::TallGrass:
             return TALL_GRASS;
+            break;
 
         case BlockId::DeadShrub:
             return DEAD_SHRUB;
+            break;
+
+        case BlockId::CactusRoot:
+            return CACTUS_BLOCK;
+            break;
 
         default:
             return NOTHING;
+            break;
     }
 }
