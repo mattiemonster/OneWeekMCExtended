@@ -23,6 +23,11 @@ void TemperateForestBiome::makeTree(Rand &rand, Chunk &chunk, int x, int y,
     makeOakTree(chunk, rand, x, y, z);
 }
 
+ChunkBlock TemperateForestBiome::getUnderTopBlock(Rand &rand) const
+{
+    return BlockId::Dirt;
+}
+
 NoiseParameters TemperateForestBiome::getNoiseParameters()
 {
     NoiseParameters heightParams;

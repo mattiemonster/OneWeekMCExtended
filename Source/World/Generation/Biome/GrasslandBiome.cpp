@@ -28,6 +28,11 @@ void GrasslandBiome::makeTree(Rand &rand, Chunk &chunk, int x, int y,
     makeOakTree(chunk, rand, x, y, z);
 }
 
+ChunkBlock GrasslandBiome::getUnderTopBlock(Rand &rand) const
+{
+    return BlockId::Dirt;
+}
+
 NoiseParameters GrasslandBiome::getNoiseParameters()
 {
     NoiseParameters heightParams;

@@ -14,6 +14,11 @@ ChunkBlock Biome::getBeachBlock(Rand &rand) const
     return BlockId::Sand;
 }
 
+ChunkBlock Biome::getUnderTopBlock(Rand& rand) const
+{
+    return BlockId::Dirt;
+}
+
 int Biome::getHeight(int x, int z, int chunkX, int chunkZ) const
 {
     return m_heightGenerator.getHeight(x, z, chunkX, chunkZ);

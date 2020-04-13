@@ -3,13 +3,18 @@
 #include "../Structures/TreeGenerator.h"
 
 LightForest::LightForest(int seed)
-    : Biome(getNoiseParameters(), 60, 80, seed)
+    : Biome(getNoiseParameters(), 1, 80, seed)
 {
 }
 
 ChunkBlock LightForest::getTopBlock(Rand &rand) const
 {
     return BlockId::Grass;
+}
+
+ChunkBlock LightForest::getUnderTopBlock(Rand &rand) const
+{
+    return BlockId::Dirt;
 }
 
 ChunkBlock LightForest::getUnderWaterBlock(Rand &rand) const

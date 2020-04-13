@@ -163,7 +163,7 @@ void ClassicOverWorldGenerator::setBlocks(int maxHeight)
                     }
                 }
                 else if (y > height - 3) {
-                    m_pChunk->setBlock(x, y, z, BlockId::Dirt);
+                    m_pChunk->setBlock(x, y, z, biome.getUnderTopBlock(m_random));
                 }
                 else {
                     m_pChunk->setBlock(x, y, z, BlockId::Stone);

@@ -17,6 +17,11 @@ ChunkBlock OceanBiome::getUnderWaterBlock(Rand &rand) const
     return BlockId::Sand;
 }
 
+ChunkBlock OceanBiome::getUnderTopBlock(Rand& rand) const
+{
+    return BlockId::Dirt;
+}
+
 void OceanBiome::makeTree(Rand &rand, Chunk &chunk, int x, int y, int z) const
 {
     rand.intInRange(0, 5) < 3 ? makePalmTree(chunk, rand, x, y, z)

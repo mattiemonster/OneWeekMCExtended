@@ -13,6 +13,11 @@ ChunkBlock DesertBiome::getTopBlock(Rand &rand) const
     return BlockId::Sand;
 }
 
+ChunkBlock DesertBiome::getUnderTopBlock(Rand &rand) const
+{
+    return BlockId::Sand;
+}
+
 ChunkBlock DesertBiome::getUnderWaterBlock(Rand &rand) const
 {
     return BlockId::Sand;
