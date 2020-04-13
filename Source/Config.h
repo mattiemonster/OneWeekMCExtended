@@ -7,6 +7,7 @@ struct Config {
     bool isFullscreen = false;
     int renderDistance = 16;
     int fov = 90;
+    bool showInfo = false;
 };
 
 #endif // CONFIG_H_INCLUDED

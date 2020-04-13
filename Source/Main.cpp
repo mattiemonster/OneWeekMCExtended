@@ -22,9 +22,12 @@ int main()
 {
     Config config;
     loadConfig(config);
-    displayInfo();
+    if (config.showInfo)
+    {
+        displayInfo();
+        std::cin.ignore();
+    }
 
-    std::cin.ignore();
     std::cout << "Loading game...\n";
 
     Application app(config);
@@ -57,6 +60,10 @@ void loadConfig(Config &config)
             else if (key == "fov") {
                 configFile >> config.fov;
                 std::cout << "Config: Field of Vision: " << config.fov << '\n';
+            }
+            else if (key == "showinfo")
+            {
+                configFile >> config.showInfo;
             }
         }
     }
