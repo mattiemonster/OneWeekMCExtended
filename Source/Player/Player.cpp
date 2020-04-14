@@ -184,7 +184,7 @@ void Player::keyboardInput(Keyboard &keyboard)
             if (m_isFlying)
                 s *= 8;
             else
-                s *= 2.25f;
+                s *= 1.75f;
         }
         m_acceleration.x += -glm::cos(glm::radians(rotation.y + 90)) * s;
         m_acceleration.z += -glm::sin(glm::radians(rotation.y + 90)) * s;
