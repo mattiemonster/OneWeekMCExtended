@@ -176,15 +176,16 @@ void Player::collide(World &world, const glm::vec3 &vel, float dt)
             }
 }
 
-///@TODO Move this
-float speed = 0.2f;
-
 void Player::keyboardInput(Keyboard &keyboard)
 {
     if (keyboard.isKeyDown(sf::Keyboard::W)) {
         float s = speed;
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::LControl))
-            s *= 5;
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::LControl)) {
+            if (m_isFlying)
+                s *= 8;
+            else
+                s *= 2.25f;
+        }
         m_acceleration.x += -glm::cos(glm::radians(rotation.y + 90)) * s;
         m_acceleration.z += -glm::sin(glm::radians(rotation.y + 90)) * s;
     }

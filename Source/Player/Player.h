@@ -27,6 +27,8 @@ class Player : public Entity {
 
     ItemStack &getHeldItems();
 
+    float speed = 0.2f;
+
   private:
     void jump();
 
